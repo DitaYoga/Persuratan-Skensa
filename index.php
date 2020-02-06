@@ -22,7 +22,7 @@
                     <li><i class="fa fa-key"></i><input type="password" name="password" placeholder="password" required></li>
                 </form>
             </div>
-            <button class="tombol">login</button>
+            <button type="submit" class="tombol">login</button>
         </div>
         <div class="logo">
             <h2>Wlcome to Skensa</h2>
