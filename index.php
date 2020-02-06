@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="design1.css">
+    <link rel="stylesheet" href="asset/css/design1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
         </div>
         <div class="logo">
             <h2>Wlcome to Skensa</h2>
-            <img src="gambar.png" alt="">
+            <img src="asset/image/gambar.png" alt="">
         </div>
         <div class="tulisan">
 
