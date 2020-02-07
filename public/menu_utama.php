@@ -39,7 +39,8 @@
         border-radius: 20px;
         position: relative;
         top: 20px;
-        margin-left: 900px;
+        margin-right: 50px;
+        float: right;
         
     }
     .logout{
@@ -49,7 +50,7 @@
         padding: 15px 20px;
         border-radius: 20px;
         position: relative;
-        top: 20px;
+        top: 35px;
         left: 130px;
     }
     </style>
