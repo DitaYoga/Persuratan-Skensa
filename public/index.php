@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['status']!="login"){
+	header("location:../index.php?pesan=belum_login");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +21,7 @@
             <img src="../asset/image/logoskensa.png" alt="">
             <h3>Persuratan Skensa</h3>
             <a href="" class="tambahdata">Tambah Data Surat</a>
-            <a href="" class="logout">Log out</a>
+            <a href="logout.php" class="logout">Log out</a>
         </div>
         <table border="1px solid black">
             <tr>
