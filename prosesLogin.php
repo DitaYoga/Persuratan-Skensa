@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 	$_SESSION['status'] = "login";
         header('location:public/index.php');
     } else {
-        echo "<script>alert('Username atau password salah');document.location.href='index.php'</script>";
+        header('location:index.php?pesan=gagal');
     }
 
 }
