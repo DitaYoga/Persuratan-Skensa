@@ -16,16 +16,16 @@
         <div class="login-form">
 
             <div class="textbox">
-                <form action="">
+                <form action="prosesLogin.php" method="post">
                     <h1>login</h1>
                     <li><i class="fa fa-user"></i><input type="text" name="username" placeholder="username" required autocomplete="off"></li>
                     <li><i class="fa fa-key"></i><input type="password" name="password" placeholder="password" required></li>
-                </form>
-            </div>
-            <button type="submit" class="tombol">login</button>
+                </div>
+                <button type="submit" name="submit" class="tombol">login</button>
+            </form>
         </div>
         <div class="logo">
-            <h2>Wlcome to Skensa</h2>
+            <h2>Welcome to Skensa</h2>
             <img src="asset/image/gambar.png" alt="">
         </div>
         <div class="tulisan">
