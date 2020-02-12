@@ -16,7 +16,7 @@ $query= "INSERT INTO arsip(alamat, nomor, lampiran, perihal, dituju)
 $hasil= mysqli_query($conn, $query);
 
 if ($hasil) {
-  header('location:menu_utama.php');
+  header('location:index.php');
 }else {
   echo "
     <script>
