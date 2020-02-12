@@ -16,7 +16,19 @@
         <div class="login-form">
 
             <div class="textbox">
+            <?php 
+	if(isset($_GET['pesan'])){
+		if($_GET['pesan'] == "gagal"){
+			echo "<p class='pesan'>Gagal Login! Username atau password salah</p>";
+		}else if($_GET['pesan'] == "logout"){
+			echo "<p class='pesanlogout'>Anda telah berhasil logout!</p>";
+		}else if($_GET['pesan'] == "belum_login"){
+			echo "<p class='pesan'>Anda harus login untuk mengakses halaman admin!</p>";
+		}
+	}
+	?>
                 <form action="prosesLogin.php" method="post">
+
                     <h1>login</h1>
                     <li><i class="fa fa-user"></i><input type="text" name="username" placeholder="username" required autocomplete="off"></li>
                     <li><i class="fa fa-key"></i><input type="password" name="password" placeholder="password" required></li>
