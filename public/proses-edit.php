@@ -14,7 +14,7 @@ $query= "UPDATE arsip SET alamat='$alamat',tanggal='$tanggal',lampiran='$lampira
 $hasil= mysqli_query($conn, $query);
 
 if ($hasil) {
-  header('location:menu_utama.php');
+  header('location:index.php');
 }else {
   echo "
     <script>
