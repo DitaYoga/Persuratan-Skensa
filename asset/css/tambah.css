@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+  text-align: center;
+  margin: 50px 0 10px 0;
+}
+.kotak-form{
+    background-color: rgb(110, 141, 228);
+    width: 800px;
+    height: 400px;
+    padding: 50px;
+    margin: auto;
+    border-radius: 20px;
+}
+.kiri{
+  float: left;
+  width: 300px;
+  margin: 0 130px 0 50px;
+}
+form input{
+  border-radius: 20px;
+  border: none;
+  width: 270px;
+  height: 30px;
+  padding-left: 5px;
+}
+form label{
+  font-size: 22px;
+}
+form button{
+  border-radius: 20px;
+  border: none;
+  width: 120px;
+  height: 30px;
+  font-size: 18px;
+}
+.kiri button{
+  margin: 130px 0 0 0;
+}
+.kanan button{
+  margin: 130px 0 0 145px;
+}
