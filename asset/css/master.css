@@ -1,0 +1,206 @@
+
+.sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  transition: .5s;
+  background-color: #5D6D7E;
+}
+.sidebar header{
+  line-height: 110px;
+  color: white;
+  background-color: #3498DB;
+
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.sidebar header h1{
+  font-size: 30px;
+margin-left: 20px;
+}
+.sidebar ul li a{
+  font-size: 20px;
+  color: white;
+  line-height: 70px;
+  transition: .5s;
+  display: block;
+  margin-left: 30px;
+  text-decoration: none;
+
+
+
+}
+.sidebar ul li a i{
+  margin-right: 10px;
+}
+.sidebar ul li a:hover{
+  margin-left: 50px;
+  color: #BDC3C7;
+}
+
+.sidebar ul li {
+  list-style: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+#check{
+  display: none;
+}
+
+label #open{
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: .5s;
+  color: white;
+}
+
+label #close{
+  position: absolute;
+  top: 30px;
+  left: -200px;
+  font-size: 40px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+    color: white;
+}
+
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #close{
+  left: 200px;
+}
+#check:checked ~ label #open{
+  left: -200px;
+}
+section{
+  transition: .5s;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.navbar{
+  width: 100%;
+  height: 90px;
+  background-color: #2874A6;
+  padding-top: 20px;
+}
+.navbar h1{
+  margin-left: 100px;
+  margin-top: 20px;
+  color: white;
+}
+.navbar img{
+    width: 80px;
+    margin-right: 20px;
+    float: right;
+    margin-top: -50px;
+}
+
+
+
+
+#edit{
+    color: #2ECC71;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+table{
+    width: 80%;
+    border: 0;
+    margin: auto;
+    margin-top: 70px;
+
+}
+table th{
+    padding: 5px;
+    background: #435d7d;
+    border: 0;
+    color: white;
+}
+table td{
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+table .srtket {
+  border-bottom: 1px solid grey;
+}
+.noo{
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+#lih{
+  width: 16%;
+}
+
+
+
+.hapus{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 6px;
+}
+.tambahdata{
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+    left: 30px;
+    border:1px solid rgb(64, 120, 224);
+    top: 50px;
+    color: black;
+
+}
+.tambahdata:hover{
+    background-color: rgb(236, 236, 236);
+    transition: .3s;
+    border:1px solid rgb(128, 161, 221);
+}
+.logout{
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+    right: 20px;
+    float: right;
+}
+.logout:hover{
+    border :1px solid rgb(192, 183, 183);
+    transition: 0.5s;
+    background-color: rgb(81, 111, 192);
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(110, 141, 228);
+    position: relative;
+}
+.header img{
+    width: 60px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.header h3{
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    color: white;
+    font-size: 40px;
+}

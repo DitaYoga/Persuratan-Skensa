@@ -1,3 +1,4 @@
+
 <?php
 
 include "../config/config.php";
@@ -5,9 +6,6 @@ include "../config/config.php";
 $query= "SELECT * FROM arsip";
 
 $hasil= mysqli_query($conn, $query);
-
- ?>
-<?php
 session_start();
 if($_SESSION['status']!="login"){
 	header("location:../index.php?pesan=belum_login");
@@ -16,14 +14,17 @@ if($_SESSION['status']!="login"){
 <html lang="en">
 
 <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../asset/css/halaman_utama.css">
+    <link rel="stylesheet" href="../asset/css/style1.css">
 </head>
 
 <body>
+
     <div class="container">
         <div class="header">
             <img src="../asset/image/logoskensa.png" alt="">
@@ -38,8 +39,7 @@ if($_SESSION['status']!="login"){
                 <th rowspan="2">Alamat ditinjau</th>
                 <th colspan="3">surat keterangan</th>
                 <th rowspan="2">dituju</th>
-                <th rowspan="2">edit</th>
-                <th rowspan="2">hapus</th>
+                <th colspan="2" rowspan="2">Action</th>
             </tr>
             <tr>
                 <th>tanggal</th>
@@ -58,8 +58,11 @@ if($_SESSION['status']!="login"){
               <td><?= $data["nomor"] ?></td>
               <td><?= $data["perihal"] ?></td>
               <td><?= $data["dituju"] ?></td>
-              <td class="edit"><a href="edit.php?id=<?= $data['id_arsip'] ?>" style="color:white; text-decoration:none;">Edit</a></td>
-              <td class="hapus"><a href="hapus.php?id=<?= $data['id_arsip'] ?>" style="color:white; text-decoration:none;">Hapus</a> </td>
+              <td class="icon">
+                <i class="fa fa-pencil" id="edit"></i>
+                <i class="fa fa-trash" id="hapus"></i>
+
+              </td>
             </tr>
             <?php $no++; } ?>
         </table>
