@@ -5,6 +5,7 @@ include "../config/config.php";
 $query = "SELECT * FROM arsip";
 
 $hasil = mysqli_query($conn, $query);
+
 session_start();
 if ($_SESSION['status'] != "login") {
   header('location:../index.php?pesan=belum_login');
@@ -78,8 +79,9 @@ if ($_SESSION['status'] != "login") {
             <td><?= $data["perihal"] ?></td>
             <td><?= $data["dituju"] ?></td>
             <td class="icon">
-              <i class="fa fa-pencil" id="edit"></i>
-              <i class="fa fa-trash" id="hapus"></i>
+            <a href="#"><i class="fa fa-pencil" id="edit"></i></a>
+            |
+            <a href="hapus.php?id=<?= $data['id_arsip'] ?>" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
 
             </td>
           </tr>
@@ -117,11 +119,10 @@ if ($_SESSION['status'] != "login") {
           <input type="text" name="perihal" required>
           <br><br>
           <label for="">Dituju</label><br>
-          <input type="text" name="dituju" required>
+          <input type="text" name="dituju" required><br>
           <button type="submit" name="tambahdata">Tambah Data</button>
         </div>
       </form>
-      </table>
     </div>
   </div>
 

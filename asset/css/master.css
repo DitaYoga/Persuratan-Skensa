@@ -215,7 +215,7 @@ table .srtket {
   left: 0;
   visibility: hidden;
   z-index: 999;
-  
+
   background-color: rgba(0, 0, 0, 0.281);
 }
 .popup{
@@ -268,4 +268,20 @@ table .srtket {
 float: left;
 width: 300px;
 margin: 0 130px 0 50px;
+}
+form input{
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 200px;
+  height: 30px;
+}
+form button{
+  margin-top: 55px;
+  margin-left: 110px;
+  width: 100px;
+  border-radius: 20px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color: rgb(110, 141, 228);
 }
