@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     if ( mysqli_num_rows($query) >0 ) {
         $_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
-        header('location:public/sidebar.php');
+        header('location:public/index.php');
     } else {
         header('location:index.php?pesan=gagal');
     }
