@@ -50,9 +50,10 @@ if ($_SESSION['status'] != "login") {
 
     </div>
     <div class="konten">
+    	
       <table cellspacing=0>
         <tr>
-          <th rowspan="2"></th>
+          <th rowspan="2" ><input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
           <th rowspan="2">Nomor surat</th>
           <th rowspan="2">Lampiran</th>
           <th rowspan="2">Alamat ditinjau</th>
@@ -68,9 +69,9 @@ if ($_SESSION['status'] != "login") {
         <?php
         $no = 1;
         while ($data = mysqli_fetch_assoc($hasil)) {
-        ?>
+        ?><form action="deleteall.php" method="POST" name="postform" enctype="multipart/form-data">
           <tr class="bodytable">
-            <td><input type="checkbox" /></td>
+            <td><input  type="checkbox" name="pilih[]" value="<?php echo $data['id_arsip'] ?>" /></td>
             <td><?= $no; ?></td>
             <td><?= $data["lampiran"] ?></td>
             <td><?= $data["alamat"] ?></td>
@@ -80,13 +81,13 @@ if ($_SESSION['status'] != "login") {
             <td><?= $data["dituju"] ?></td>
             <td class="icon">
             <a href="#"><i class="fa fa-pencil" id="edit"></i></a>
-            |
+            <span>|</span>
             <a href="hapus.php?id=<?= $data['id_arsip'] ?>" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
 
             </td>
           </tr>
         <?php $no++;
-        } ?>
+        } ?><input type="submit" href="deleteall.php" value="Delete Selected file" class="deleteall" /></form>
       </table>
 
 
@@ -129,3 +130,21 @@ if ($_SESSION['status'] != "login") {
 </body>
 
 </html>
+<script type="text/javascript">
+ function checkAll(tes) {
+       var checkboxes = document.getElementsByTagName("input");
+       if (tes.checked) {
+           for (var i = 1; i <= checkboxes.length + 1; i++) {
+               if (checkboxes[i].type == 'checkbox' ) {
+                   checkboxes[i].checked = true;
+               }
+           }
+       } else {
+           for (var i = 1; i <= checkboxes.length + 1; i++) {
+               if (checkboxes[i].type == 'checkbox') {
+                   checkboxes[i].checked = false;
+               }
+           }
+       }
+   }
+</script>
