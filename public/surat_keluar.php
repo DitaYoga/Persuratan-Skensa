@@ -35,7 +35,7 @@ if ($_SESSION['status'] != "login") {
       <h1>MENU</h1>
     </header>
     <ul>
-      <li><a href="index.php"><i class="fa fa-home"></i>Home </a> </li>
+    <li><a href="index.php"><i class="fa fa-home"></i>Home </a> </li>
       <li><a href="#popup"><i class="fa fa-edit"></i>Tambah Surat </a> </li>
       <li><a href="surat_keluar.php"><i class="fa fa-download"></i>Surat masuk </a> </li>
       <li><a href="surat_masuk.php"><i class="fa fa-upload"></i>Surat Keluar </a> </li>
@@ -52,8 +52,8 @@ if ($_SESSION['status'] != "login") {
 
     </div>
     <div class="konten">
-      <center><h2>halaman home</h2></center>
-      <!-- <table cellspacing=0>
+      <center><h2>Surat Keluar</h2></center>
+      <table cellspacing=0>
         <tr>
           <th rowspan="2"></th>
           <th rowspan="2">Nomor surat</th>
@@ -90,7 +90,7 @@ if ($_SESSION['status'] != "login") {
           </tr>
         <?php $no++;
         } ?>
-      </table> -->
+      </table>
 
 
 
