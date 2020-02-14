@@ -84,11 +84,11 @@ section{
   margin-left: 250px;
 }
 .deleteall{
-  width: 150px;
+  width: 13%;
   height: 30px;
-  position: absolute;
-  top: 150px;
-  right: 128px;
+  position: relative;
+  top:70px;
+  left: 77%;
   background: red;
   color: white;
   cursor: pointer;
