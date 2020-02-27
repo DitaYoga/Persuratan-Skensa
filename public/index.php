@@ -10,6 +10,8 @@ session_start();
 if ($_SESSION['status'] != "login") {
   header('location:../index.php?pesan=belum_login');
 }
+$dataid = $_SESSION['test'];
+session_encode();
 
 ?>
 <!DOCTYPE html>
@@ -80,7 +82,7 @@ if ($_SESSION['status'] != "login") {
             <td><?= $data["perihal"] ?></td>
             <td><?= $data["dituju"] ?></td>
             <td class="icon">
-            <a href="#"><i class="fa fa-pencil" id="edit"></i></a>
+            <a href="clickedit.php?id=<?php echo $data['id_arsip'] ?>"><i class="fa fa-pencil" id="edit"></i></a>
             <span>|</span>
             <a href="hapus.php?id=<?= $data['id_arsip'] ?>" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
 
@@ -126,6 +128,48 @@ if ($_SESSION['status'] != "login") {
       </form>
     </div>
   </div>
+
+
+<?php 
+  $queryedit="SELECT * FROM arsip WHERE id_arsip=".$dataid;
+  $viewedit = mysqli_query($conn,$queryedit);
+  $dataedit = mysqli_fetch_array($viewedit);
+  
+
+ ?>
+  <div class="windowedit" id="popupedit">
+
+    <div class="popupedit">
+      <div class="kotakpopedit">
+          <h2>Edit data Surat</h2>
+        <a href="#" class="close">X</a><br><br>
+      </div>
+      <form class="" action="proses-edit.php?id=<?php echo $dataid ?>" method="post">
+        <div class="kiri">
+          <label for="">Alamat Tujuan</label><br>
+          <input type="text" name="alamat" value="<?php echo $dataedit['alamat'] ?>" required>
+          <br><br>
+          <label for="">Nomor</label><br>
+          <input type="number" name="nomor" value="<?php echo $dataedit['nomor'] ?>" required>
+          <br><br>
+          <label for="">Lampiran</label><br>
+          <input type="number" name="lampiran" value="<?php echo $dataedit['lampiran'] ?>" required>
+        </div>
+        <input type="hidden" value="<?php echo $dataedit['tanggal'] ?>" name="tanggal">
+        <div class="kanan">
+          <label for="">Perihal</label><br>
+          <input type="text" name="perihal" value="<?php echo $dataedit['perihal'] ?>" required>
+          <br><br>
+          <label for="">Dituju</label><br>
+          <input type="text" name="dituju" value="<?php echo $dataedit['dituju'] ?>" required><br>
+          <button type="submit" name="editdata">Edit Data</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
 
 </body>
 
