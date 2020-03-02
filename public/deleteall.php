@@ -1,7 +1,10 @@
 <?php 	
 	include "../config/config.php";
 	$id=$_POST['pilih'];
-	$jml_pilih = count($id);
+	if ($_POST['pilih'] == "") {
+		header("location:index.php");
+	}else{
+		$jml_pilih = count($id);
 	for($x=0;$x<$jml_pilih;$x++){
     		$hapus=mysqli_query($conn,"DELETE FROM arsip WHERE id_arsip='$id[$x]'");
 	}
@@ -12,4 +15,6 @@
             echo "Oops! Error 404...";
         }
 
+	}
+	
  ?>

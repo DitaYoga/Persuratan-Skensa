@@ -6,11 +6,17 @@ $query = "SELECT * FROM arsip";
 
 $hasil = mysqli_query($conn, $query);
 
+
 session_start();
 if ($_SESSION['status'] != "login") {
   header('location:../index.php?pesan=belum_login');
 }
-$dataid = $_SESSION['test'];
+if ($_SESSION['test'] == "") {
+  $_SESSION['test'] = 1;
+}else{
+  $dataid = $_SESSION['test'];
+}
+
 session_encode();
 
 ?>
@@ -70,7 +76,7 @@ session_encode();
         </tr>
         <?php
         $no = 1;
-        while ($data = mysqli_fetch_assoc($hasil)) {
+        while ($data = mysqli_fetch_array($hasil)) {
         ?><form action="deleteall.php" method="POST" name="postform" enctype="multipart/form-data">
           <tr class="bodytable">
             <td><input  type="checkbox" name="pilih[]" value="<?php echo $data['id_arsip'] ?>" /></td>
