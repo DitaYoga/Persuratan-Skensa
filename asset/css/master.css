@@ -83,7 +83,16 @@ section{
 #check:checked ~ section{
   margin-left: 250px;
 }
-
+.deleteall{
+  width: 13%;
+  height: 30px;
+  position: relative;
+  top:70px;
+  left: 77%;
+  background: red;
+  color: white;
+  cursor: pointer;
+}
 *{
   padding: 0;
   margin: 0;
@@ -128,17 +137,11 @@ table th{
     background: #435d7d;
     border: 0;
     color: white;
+    border: 0.5px solid grey;
 }
 table td{
     padding: 10px;
     border-bottom: 1px solid grey;
-}
-table .srtket {
-  border-bottom: 1px solid grey;
-}
-.noo{
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
 }
 #lih{
   width: 16%;
@@ -254,6 +257,54 @@ table .srtket {
   visibility: visible;
 }
 /* / */
+/*/*/
+.windowedit {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 999;
+
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.popupedit{
+  position: relative;
+  top: 100px;
+  left: 200px;
+  width: 60%;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, .9);
+  border-radius: 20px;
+}
+.kotakpopedit{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(110, 141, 228);
+  border-radius: 18px 18px 0px 0px ;
+  margin-bottom: 10px;
+}
+.popupedit a{
+  float: right;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 10px 15px;
+}
+
+.kotakpopedit h2{
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  color: white;
+}
+#popupedit:target {
+  visibility: visible;
+}
+/*/*/
+
 
 
 .kotak-form{

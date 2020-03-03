@@ -6,10 +6,18 @@ $query = "SELECT * FROM arsip";
 
 $hasil = mysqli_query($conn, $query);
 
+
 session_start();
 if ($_SESSION['status'] != "login") {
   header('location:../index.php?pesan=belum_login');
 }
+if ($_SESSION['test'] == "") {
+  $_SESSION['test'] = 1;
+}else{
+  $dataid = $_SESSION['test'];
+}
+
+session_encode();
 
 ?>
 <!DOCTYPE html>
@@ -52,10 +60,15 @@ if ($_SESSION['status'] != "login") {
 
     </div>
     <div class="konten">
+<<<<<<< HEAD
       <center><h2>halaman home</h2></center>
       <!-- <table cellspacing=0>
+=======
+    	
+      <table cellspacing=0>
+>>>>>>> beea19d314d1b7cfd6cf65df3f9baa6e7dc7fc71
         <tr>
-          <th rowspan="2"></th>
+          <th rowspan="2" ><input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
           <th rowspan="2">Nomor surat</th>
           <th rowspan="2">Lampiran</th>
           <th rowspan="2">Alamat ditinjau</th>
@@ -70,10 +83,10 @@ if ($_SESSION['status'] != "login") {
         </tr>
         <?php
         $no = 1;
-        while ($data = mysqli_fetch_assoc($hasil)) {
-        ?>
+        while ($data = mysqli_fetch_array($hasil)) {
+        ?><form action="deleteall.php" method="POST" name="postform" enctype="multipart/form-data">
           <tr class="bodytable">
-            <td><input type="checkbox" /></td>
+            <td><input  type="checkbox" name="pilih[]" value="<?php echo $data['id_arsip'] ?>" /></td>
             <td><?= $no; ?></td>
             <td><?= $data["lampiran"] ?></td>
             <td><?= $data["alamat"] ?></td>
@@ -82,15 +95,20 @@ if ($_SESSION['status'] != "login") {
             <td><?= $data["perihal"] ?></td>
             <td><?= $data["dituju"] ?></td>
             <td class="icon">
-            <a href="#"><i class="fa fa-pencil" id="edit"></i></a>
-            |
+            <a href="clickedit.php?id=<?php echo $data['id_arsip'] ?>"><i class="fa fa-pencil" id="edit"></i></a>
+            <span>|</span>
             <a href="hapus.php?id=<?= $data['id_arsip'] ?>" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
 
             </td>
           </tr>
         <?php $no++;
+<<<<<<< HEAD
         } ?>
       </table> -->
+=======
+        } ?><input type="submit" href="deleteall.php" value="Delete Selected file" class="deleteall" /></form>
+      </table>
+>>>>>>> beea19d314d1b7cfd6cf65df3f9baa6e7dc7fc71
 
 
 
@@ -129,6 +147,66 @@ if ($_SESSION['status'] != "login") {
     </div>
   </div>
 
+
+<?php 
+  $queryedit="SELECT * FROM arsip WHERE id_arsip=".$dataid;
+  $viewedit = mysqli_query($conn,$queryedit);
+  $dataedit = mysqli_fetch_array($viewedit);
+  
+
+ ?>
+  <div class="windowedit" id="popupedit">
+
+    <div class="popupedit">
+      <div class="kotakpopedit">
+          <h2>Edit data Surat</h2>
+        <a href="#" class="close">X</a><br><br>
+      </div>
+      <form class="" action="proses-edit.php?id=<?php echo $dataid ?>" method="post">
+        <div class="kiri">
+          <label for="">Alamat Tujuan</label><br>
+          <input type="text" name="alamat" value="<?php echo $dataedit['alamat'] ?>" required>
+          <br><br>
+          <label for="">Nomor</label><br>
+          <input type="number" name="nomor" value="<?php echo $dataedit['nomor'] ?>" required>
+          <br><br>
+          <label for="">Lampiran</label><br>
+          <input type="number" name="lampiran" value="<?php echo $dataedit['lampiran'] ?>" required>
+        </div>
+        <input type="hidden" value="<?php echo $dataedit['tanggal'] ?>" name="tanggal">
+        <div class="kanan">
+          <label for="">Perihal</label><br>
+          <input type="text" name="perihal" value="<?php echo $dataedit['perihal'] ?>" required>
+          <br><br>
+          <label for="">Dituju</label><br>
+          <input type="text" name="dituju" value="<?php echo $dataedit['dituju'] ?>" required><br>
+          <button type="submit" name="editdata">Edit Data</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
 </body>
 
 </html>
+<script type="text/javascript">
+ function checkAll(tes) {
+       var checkboxes = document.getElementsByTagName("input");
+       if (tes.checked) {
+           for (var i = 1; i <= checkboxes.length + 1; i++) {
+               if (checkboxes[i].type == 'checkbox' ) {
+                   checkboxes[i].checked = true;
+               }
+           }
+       } else {
+           for (var i = 1; i <= checkboxes.length + 1; i++) {
+               if (checkboxes[i].type == 'checkbox') {
+                   checkboxes[i].checked = false;
+               }
+           }
+       }
+   }
+</script>
