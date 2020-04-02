@@ -60,13 +60,13 @@ session_encode();
 
     </div>
     <div class="konten">
-<<<<<<< HEAD
+
       <center><h2>halaman home</h2></center>
-      <!-- <table cellspacing=0>
-=======
+      <table cellspacing=0>
+
     	
       <table cellspacing=0>
->>>>>>> beea19d314d1b7cfd6cf65df3f9baa6e7dc7fc71
+
         <tr>
           <th rowspan="2" ><input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
           <th rowspan="2">Nomor surat</th>
@@ -102,13 +102,12 @@ session_encode();
             </td>
           </tr>
         <?php $no++;
-<<<<<<< HEAD
+
         } ?>
-      </table> -->
-=======
-        } ?><input type="submit" href="deleteall.php" value="Delete Selected file" class="deleteall" /></form>
       </table>
->>>>>>> beea19d314d1b7cfd6cf65df3f9baa6e7dc7fc71
+      <input type="submit" href="deleteall.php" value="Delete Selected file" class="deleteall" /></form>
+      </table>
+
 
 
 
