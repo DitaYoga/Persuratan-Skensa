@@ -61,7 +61,7 @@ session_encode();
     </div>
     <div class="konten">
 
-      <center><h2>halaman home</h2></center>
+      <center><h2>Halaman Home</h2></center>
       <table cellspacing=0>
 
     	

@@ -86,12 +86,12 @@ section{
 .deleteall{
   width: 13%;
   height: 30px;
-  position: relative;
-  top:70px;
+  position: absolute;
+  top:250px;
   left: 77%;
   background: red;
   color: white;
-  cursor: pointer;
+  
 }
 *{
   padding: 0;
