@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Apr 2020 pada 02.55
+-- Waktu pembuatan: 09 Apr 2020 pada 03.04
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.3.6
 
@@ -54,11 +54,11 @@ INSERT INTO `arsip` (`id_arsip`, `lampiran`, `alamat`, `tanggal`, `nomor`, `peri
 
 CREATE TABLE `surat_masuk` (
   `nomor` int(11) NOT NULL,
-  `lampiran` int(11) NOT NULL,
-  `alamat_pengirim` int(11) NOT NULL,
-  `tanggal` int(11) NOT NULL,
-  `perihal` int(11) NOT NULL,
-  `dituju` int(11) NOT NULL,
+  `lampiran` varchar(25) NOT NULL,
+  `alamat_pengirim` varchar(25) NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `perihal` varchar(25) NOT NULL,
+  `dituju` varchar(25) NOT NULL,
   `id_suratMasuk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -67,7 +67,9 @@ CREATE TABLE `surat_masuk` (
 --
 
 INSERT INTO `surat_masuk` (`nomor`, `lampiran`, `alamat_pengirim`, `tanggal`, `perihal`, `dituju`, `id_suratMasuk`) VALUES
-(1, 1, 0, 0, 0, 0, 5);
+(1, '1', '0', '0000-00-00 00:00:00', '0', '0', 5),
+(2, '2', '2', '0000-00-00 00:00:00', '2', '2', 6),
+(1, '12', 'asas', '2020-04-09 01:04:23', 'asnajsn', 'nsajs', 7);
 
 -- --------------------------------------------------------
 
@@ -125,7 +127,7 @@ ALTER TABLE `arsip`
 -- AUTO_INCREMENT untuk tabel `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
-  MODIFY `id_suratMasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_suratMasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
