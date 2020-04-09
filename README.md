@@ -18,4 +18,5 @@ Projek ini untuk mengatur persuratan yang ada di SMK Negeri 1 Denpasar
 * [Bagoes Pantera](https://github.com/BagoesPantera)
 * [Wisnu Arya](https://github.com/wisnuarya-ney)
 * [Rangga Harikesa](https://github.com/RanggaHarikesa)
-* dan masih ada lagi , akan kita update secepatnya
+* [Ditya Purnama](https://github.com/DityaPurnama)
+
