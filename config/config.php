@@ -3,5 +3,5 @@
 $conn = mysqli_connect('localhost','root','','persuratan_skensa');
 
 if(!$conn){
-    echo "gagal";
+    echo "gagal! diperiksa kembali";
 }
