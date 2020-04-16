@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 	$_SESSION['status'] = "login";
         header('location:public/index.php');
     } else {
-        header('location:index.php?pesan=gagal');
+        header('location:index.php?pesan=gagal_Login');
     }
 
 }
