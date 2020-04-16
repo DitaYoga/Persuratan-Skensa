@@ -44,10 +44,10 @@ class Suratkeluar_model
     }
     public function hapusall($data)
     {
-        $id = $data;
+        $id = $_POST['pilih'];
         $jml_pilih = count($id);
         for ($x = 0; $x < $jml_pilih; $x++) {
-            $query = "DELETE FROM arsip WHERE id_arsip='$data[$x]'";
+            $query = "DELETE FROM arsip WHERE id_arsip='$id[$x]'";
             $this->db->query($query);
             $this->db->execute();
         }
