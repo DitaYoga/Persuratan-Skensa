@@ -2,7 +2,7 @@
 class Profile extends Controller {
     public function index(){
         $data['judul'] = "Profile";
-        $data['profile']= $this->model('profile_model')->getProfile($_SESSION['user']['id_user']);
+        $data['profile']= $this->model('profile_model')->getProfile($_SESSION['user']['user_id']);
         // $data['suratkeluar']= $this->model('suratkeluar_model')->getArsipSurat();
 
         $this->view('templates/header', $data);

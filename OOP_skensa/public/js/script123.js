@@ -9,13 +9,13 @@ $(function () {
     $('.editsuratmasuk').on('click', function () {
         $('#judulpopupmasuk').html('Ubah Data Surat Masuk');
         $('#tombolpopupmasuk').html('Ubah');
-        $('#formUbahMasuk').attr('action', 'http://localhost/persuratan_skensa/OOP_skensa/public/suratmasuk/ubah');
+        $('#formUbahMasuk').attr('action', 'http://localhost/persuratan_skensa/Persuratan-Skensa/OOP_skensa/public/suratmasuk/ubah');
 
         const id = $(this).data('id');
         // console.log(id);
 
         $.ajax({
-            url: 'http://localhost/persuratan_skensa/OOP_skensa/public/suratmasuk/getubah',
+            url: 'http://localhost/persuratan_skensa/Persuratan-Skensa/OOP_skensa/public/suratmasuk/getubah',
             data: {
                 id: id
             },
@@ -45,11 +45,11 @@ $(function () {
     $('.editsuratkeluar').on('click', function () {
         $('#judulpopupkeluar').html('Ubah Data Surat Keluar');
         $('#tombolpopupkeluar').html('Ubah');
-        $('#formUbahKeluar').attr('action', 'http://localhost/persuratan_skensa/OOP_skensa/public/suratkeluar/ubah');
+        $('#formUbahKeluar').attr('action', 'http://localhost/persuratan_skensa/Persuratan-Skensa/OOP_skensa/public/suratkeluar/ubah');
         const id = $(this).data('id');
 
         $.ajax({
-            url: 'http://localhost/persuratan_skensa/OOP_skensa/public/suratkeluar/getubah',
+            url: 'http://localhost/persuratan_skensa/Persuratan-Skensa/OOP_skensa/public/suratkeluar/getubah',
             data: {
                 id: id
             },
@@ -68,7 +68,6 @@ $(function () {
         });
 
     });
-
 
 
 });
