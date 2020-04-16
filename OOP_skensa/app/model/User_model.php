@@ -17,6 +17,7 @@ class User_model
             $query = "UPDATE user SET nama='$nama',username='$username' WHERE id_user='$id'";
             $this->db->query($query);
             $this->db->execute();
+            
         }else{
             $password_baru= md5($password_baru);
             $query = "UPDATE user SET nama='$nama',username='$username',password='$password_baru' WHERE id_user='$id'";

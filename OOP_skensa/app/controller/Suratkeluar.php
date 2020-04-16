@@ -38,10 +38,6 @@ class Suratkeluar extends Controller
     public function hapusall()
     {
         $data = $_POST['pilih'];
-        if($data=''){
-            header('location:' . BASEURL . '/suratmasuk');
-            exit;
-        }else{
         if ($this->model('Suratkeluar_model')->hapusall($data) > 0) {
             Pesan::setPesan('Data Surat', 'Berhasil', 'dihapus', 'berhasil');
             header('location:' . BASEURL . '/suratkeluar');
@@ -50,7 +46,7 @@ class Suratkeluar extends Controller
             Pesan::setPesan('Data Surat', 'Gagal', 'dihapus', 'gagal');
             header('location:' . BASEURL . '/suratkeluar');
             exit;
-        }}
+        }
     }
     public function getUbah()
     {

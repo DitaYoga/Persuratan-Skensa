@@ -10,5 +10,6 @@ class Login_model{
         $query= "SELECT * FROM user WHERE username='$username' && password='$password'";
         $this->db->query($query);
         return $this->db->single();
+
     }
 }
