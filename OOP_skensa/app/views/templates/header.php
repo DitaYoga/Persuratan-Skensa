@@ -29,7 +29,11 @@
             <li><a href="<?= BASEURL?>/home"><i class="fa fa-home"></i>Home </a> </li>
             <li><a href="<?= BASEURL?>/suratmasuk"><i class="fa fa-download"></i>Surat masuk </a> </li>
             <li><a href="<?= BASEURL?>/suratkeluar"><i class="fa fa-upload"></i>Surat Keluar </a> </li>
+<<<<<<< HEAD
             <li><a href="<?= BASEURL?>/profile/<?=$_SESSION['user']['user_id']?>"><i class="fa fa-user"></i>Profile </a> </li>
+=======
+            <li><a href="#profile"><i class="fa fa-user"></i>Profile </a> </li>
+>>>>>>> bacf59b7f137fbae51d3bbc4516f670a47197e37
             <li><a href="<?= BASEURL?>/logout"><i class="fa fa-power-off"></i>Log out </a> </li>
         </ul>
     </div>

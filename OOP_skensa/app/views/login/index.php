@@ -47,7 +47,7 @@
         </div>
         <div class="tulisan">
 
-            <span>Selamat Datang di Persuratan Skensa, Website ini dibuat untuk mempermudah pengolahan data Persuratan di SMKN 1 Denpasar</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus porro error distinctio alias. Officiis, laudantium labore consequuntur cumque totam aliquam error rerum veniam, et placeat molestiae, neque similique magni at!</span>
         </div>
 
     </div>

@@ -39,20 +39,14 @@ class Suratmasuk extends Controller
     public function hapusall()
     {
         $data = $_POST['pilih'];
-        if($data=''){
+        if ($this->model('Suratmasuk_model')->hapusall($data) > 0) {
+            Pesan::setPesan('Data Surat', 'Berhasil', 'dihapus', 'berhasil');
             header('location:' . BASEURL . '/suratmasuk');
             exit;
-        }else{
-
-            if ($this->model('Suratmasuk_model')->hapusall($data) > 0) {
-                Pesan::setPesan('Data Surat', 'Berhasil', 'dihapus', 'berhasil');
-                header('location:' . BASEURL . '/suratmasuk');
-                exit;
-            } else {
-                Pesan::setPesan('Data Surat', 'Gagal', 'dihapus', 'gagal');
-                header('location:' . BASEURL . '/suratmasuk');
-                exit;
-            }
+        } else {
+            Pesan::setPesan('Data Surat', 'Gagal', 'dihapus', 'gagal');
+            header('location:' . BASEURL . '/suratmasuk');
+            exit;
         }
     }
 
