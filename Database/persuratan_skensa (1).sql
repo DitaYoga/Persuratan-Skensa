@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 02:36 AM
+-- Generation Time: Apr 17, 2020 at 02:45 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -76,6 +76,7 @@ INSERT INTO `surat_masuk` (`nomor`, `lampiran`, `alamat_pengirim`, `tanggal`, `p
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
+  `nama` varchar(200) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` varchar(20) NOT NULL
@@ -85,9 +86,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `password`, `level`) VALUES
-(4, 'admin', '0192023a7bbd73250516f069df18b500', 'admin'),
-(5, 'kepsek', 'a2ed32cae296647110b3dbbf60c3f445', 'kepsek');
+INSERT INTO `user` (`user_id`, `nama`, `username`, `password`, `level`) VALUES
+(4, 'admin ', 'admin', '0192023a7bbd73250516f069df18b500', 'admin'),
+(5, 'pak ketut suparsa', 'kepsek', 'a2ed32cae296647110b3dbbf60c3f445', 'kepsek');
 
 --
 -- Indexes for dumped tables
