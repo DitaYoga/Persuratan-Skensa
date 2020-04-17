@@ -41,10 +41,10 @@ class Suratmasuk_model
     }
     public function hapusall($data)
     {
-        $id = $data;
+        $id = $_POST['pilih'];
         $jml_pilih = count($id);
         for ($x = 0; $x < $jml_pilih; $x++) {
-            $query = "DELETE FROM surat_masuk WHERE id_suratMasuk='$data[$x]'";
+            $query = "DELETE FROM surat_masuk WHERE id_suratMasuk='$id[$x]'";
             $this->db->query($query);
             $this->db->execute();
         }

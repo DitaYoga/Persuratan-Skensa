@@ -5,7 +5,7 @@ Projek ini untuk mengatur persuratan yang ada di SMK Negeri 1 Denpasar.
 ## Dibuat Dengan
 
 * [HTML](https://html.com/)
-* [CSS](https://www.w3schools.com/css/)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [PHP](https://www.php.net/)
 
 ## Dibuat Oleh
