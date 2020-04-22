@@ -37,7 +37,11 @@
             <td><?= $data["nomor"] ?></td>
             <td><?= $data["perihal"] ?></td>
             <td><?= $data["dituju"] ?></td>
-            <td><a href=""><i class="fa fa-eye"></i></a></td>
+            <td>
+              <a href=""><i class="fa fa-check"></i></a>
+              |
+              <a href=""><i class="fa fa-times"></i></a>
+            </td>
            
         </tr>
     <?php $no++;
