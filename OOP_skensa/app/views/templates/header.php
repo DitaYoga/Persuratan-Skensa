@@ -12,7 +12,7 @@
 
 <body>
     <?php 
-    if($_SESSION['status']!= 'login'){
+    if($_SESSION['status']!= 'admin' && $_SESSION['status'] != 'operator'){
         header('location:'.BASEURL.'/login');
     }
     ?>
@@ -31,8 +31,14 @@
             <li><a href="<?= BASEURL?>/suratkeluar"><i class="fa fa-upload"></i>Surat Keluar </a> </li>
 
             <li><a href="<?= BASEURL?>/profile/<?=$_SESSION['user']['user_id']?>"><i class="fa fa-user"></i>Profile </a> </li>
-            <li><a href="<?= BASEURL?>/pengguna"><i class="fa fa-address-book"></i>pengguna</a> </li>
+            <?php 
+            if($_SESSION['status']=='admin'){
+                echo ' <li><a href="<?= BASEURL?>/pengguna"><i class="fa fa-address-book"></i>pengguna</a> </li>';   
+            }
 
+            ?>
+
+        
 
             <li><a href="<?= BASEURL?>/logout"><i class="fa fa-power-off"></i>Log out </a> </li>
         </ul>
