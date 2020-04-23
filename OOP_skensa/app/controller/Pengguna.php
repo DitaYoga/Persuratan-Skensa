@@ -24,4 +24,16 @@ class Pengguna extends Controller
             exit;
         }
     }
+    public function hapus($data)
+    {
+        if ($this->model('User_model')->hapus($data) > 0) {
+            Pesan::setPesan('Data user', 'berhasil', 'dihapus', 'berhasil');
+            header('location:' . BASEURL . '/pengguna');
+            exit;
+        } else {
+            Pesan::setPesan('Data user', 'gagal', 'dihapus', 'gagal');
+            header('location:' . BASEURL . '/pengguna');
+            exit;
+        }
+    }
 }

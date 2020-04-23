@@ -45,4 +45,10 @@ class User_model
         }
         return 1;
     }
+    public function hapus($data)
+    {
+        $this->db->query("DELETE FROM user WHERE user_id ='$data'");
+        $this->db->execute();
+        return $this->db->rowcount();
+    }
 }
