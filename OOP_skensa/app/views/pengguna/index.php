@@ -27,7 +27,7 @@ if (isset($_SESSION['pesan'])) {
                 <td><?= $data['nama'] ?></td>
                 <td><?= $data['username'] ?></td>
                 <td><?= $data['level'] ?></td>
-                <td class="icon">
+                <td class="hapus_pengguna">
                     <a href="<?= BASEURL ?>/pengguna/hapus/<?= $data['user_id'] ?>" onclick="return confirm('yakin ingin menghapus data user?')" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
                 </td>
             </tr>

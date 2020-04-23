@@ -695,7 +695,7 @@ table td {
     background-color: rgb(109, 109, 109);
     border-radius: 0px 0px 18px 18px;
     margin-bottom: 10px;
- }
+}
 
     .pengguna .bataltambah a {
     float: left;
@@ -711,4 +711,6 @@ table td {
     font-size: 17px;
 }
 
-
+.hapus_pengguna{
+    text-align: center;
+}
