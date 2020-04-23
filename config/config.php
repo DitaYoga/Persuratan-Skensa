@@ -3,6 +3,6 @@
 $conn = mysqli_connect('localhost','root','','persuratan_skensa');
 
 if(!$conn){
-    echo "gagal!";
+    echo "gagal! mohon di cek kembali!";
 }
 ?>
