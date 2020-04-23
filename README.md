@@ -1,6 +1,6 @@
 # Persuratan Skensa
 
-Projek ini untuk mengatur persuratan yang ada di SMK Negeri 1 Denpasar.
+Projek ini untuk mengatur persuratan yang ada di [Smk Negeri 1 Denpasar](http://www.smkn1denpasar.sch.id/).
 
 ## Dibuat Dengan
 
