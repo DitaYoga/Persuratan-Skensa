@@ -16,6 +16,7 @@ if (isset($_SESSION['pesan'])) {
             <th>Nama</th>
             <th>username</th>
             <th>Level</th>
+            <th>Action</th>
         </tr>
         <?php
         $no = 1;
@@ -26,6 +27,9 @@ if (isset($_SESSION['pesan'])) {
                 <td><?= $data['nama'] ?></td>
                 <td><?= $data['username'] ?></td>
                 <td><?= $data['level'] ?></td>
+                <td class="icon">
+                    <a href="<?= BASEURL ?>/pengguna/hapus/<?= $data['user_id'] ?>" onclick="return confirm('yakin ingin menghapus data user?')" style="color:red;"><i class="fa fa-trash" id="hapus"></i></a>
+                </td>
             </tr>
         <?php $no++;
         } ?>
