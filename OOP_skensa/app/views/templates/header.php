@@ -32,7 +32,7 @@
 
             <li><a href="<?= BASEURL?>/profile/<?=$_SESSION['user']['user_id']?>"><i class="fa fa-user"></i>Profile </a> </li>
             <?php 
-            if($_SESSION['status']='admin'){
+            if($_SESSION['status']=='admin'){
                 echo ' <li><a href="'.BASEURL.'/pengguna"><i class="fa fa-address-book"></i>pengguna</a> </li>';   
             }
 
