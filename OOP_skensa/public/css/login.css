@@ -17,8 +17,6 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    /* margin-left: 200px;
-    margin-top: 100px; */
     background-image: radial-gradient(circle 337px at 0% 2.1%, rgba(0, 226, 192, 1) 0.3%, rgba(149, 0, 248, 1) 100%);
     background-image: linear-gradient(68.2deg, rgba(3, 126, 243, 1) -0.3%, rgba(48, 195, 158, 1) 100.2%);
     background-image: linear-gradient(90.6deg, rgba(59, 158, 255, 1) -1.2%, rgba(246, 135, 255, 1) 91.6%);
@@ -56,18 +54,15 @@ li i {
 
 .textbox input {
     padding: 10px 30px;
-    /* border-radius: 10px; */
     width: 300px;
     margin-top: 30px;
     margin-left: 0;
-    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
     border: none;
     border-bottom: 1px solid black;
 }
 
 .login-form button {
     padding: 5px 35px;
-    /* width: 5%; */
     border-radius: 20px;
     font-size: 20px;
     border: none;
@@ -114,8 +109,6 @@ form h1 {
     .container {
         width: 100%;
         height: 100%;
-        /* margin-left: 200px;
-        margin-top: 100px; */
         background-image: radial-gradient(circle 337px at 0% 2.1%, rgba(0, 226, 192, 1) 0.3%, rgba(149, 0, 248, 1) 100%);
         background-image: linear-gradient(68.2deg, rgba(3, 126, 243, 1) -0.3%, rgba(48, 195, 158, 1) 100.2%);
         background-image: linear-gradient(90.6deg, rgba(59, 158, 255, 1) -1.2%, rgba(246, 135, 255, 1) 91.6%);
@@ -153,18 +146,15 @@ form h1 {
 
     .textbox input {
         padding: 10px 30px;
-        /* border-radius: 10px; */
         width: 300px;
         margin-top: 30px;
         margin-left: 0;
-        /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
         border: none;
         border-bottom: 1px solid black;
     }
 
     .login-form button {
         padding: 5px 35px;
-        /* width: 5%; */
         border-radius: 20px;
         font-size: 20px;
         border: none;
